@@ -132,6 +132,8 @@ t(n.itp_lagrange([(0,8),(1,22),(2,134),(3,560),(4,1660)], 2.5), 288.625, 'interp
 t(n.itp_lagrange([(0,8),(1,13),(2,40),(3,107),(4,232),(5,433)], 3.25), 132.1, 'interpolation.lagrange.4')
 
 # # Regression
+t(n.reg_leastsquares([(1,1),(2,4),(3,9),(4,16),(5,25),(6,36)]), [[0.0], [0.0], [1.0]], 'regression.leastsquares.1')
+t(n.reg_leastsquares([(0,1),(2,6),(4,5),(6,3),(8,7),(10,11)]), [[1.0], [3.08], [0.42], [-0.51], [0.08], [-0.0]], 'regression.leastsquares.2')
 t(n.reg_leastsquares_solve([(0,1),(2,5.1),(4,9),(6,13),(8,17),(10,21)], 6, 1), 13, 'regression.leastsquares_solve.1')
 t(n.reg_leastsquares_solve([(0,0),(2,8),(3,10),(4,14),(5,17),(7,22),(8,26),(9,29),(10,32),(12,35)], 6, 1), 19.3, 'regression.leastsquares_solve.2')
 t(n.reg_leastsquares_solve([(2,1),(3,6),(5,22),(6,33),(8,61)], 6, 2), 33, 'regression.leastsquares_solve.3')
