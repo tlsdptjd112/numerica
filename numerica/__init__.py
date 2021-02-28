@@ -37,3 +37,4 @@ from .finite_differences.degree import degree as fd_degree
 from .interpolation.lagrange import lagrange as itp_lagrange
 
 from .regression.leastsquares import leastsquares as reg_leastsquares
+from .regression.leastsquares import leastsquares_solve as reg_leastsquares_solve

@@ -2,7 +2,7 @@ from ..finite_differences.degree import degree
 from ..linear_systems.gauss import gauss
 from ..utils.math import polynomial
 
-def leastsquares(pairs, x, deg=None):
+def leastsquares(pairs, deg=None):
   if deg == None:
     deg = degree(pairs)
 
@@ -24,6 +24,10 @@ def leastsquares(pairs, x, deg=None):
       ])
 
   X = gauss(A, C)
+  return X
+
+def leastsquares_solve(pairs, x, deg=None):
+  X = leastsquares(pairs, deg)
 
   result = polynomial([xi[0] for xi in X][::-1], x)
   return result
