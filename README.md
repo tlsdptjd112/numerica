@@ -184,8 +184,8 @@ Use [documentation](https://github.com/ramesaliyev/numerica#documentation) to se
 
 ## 9- Regression
 ### Least Squares
-    n.reg_leastsquares(pair_tuples) // returns polynomial
-    n.reg_leastsquares_solve(pair_tuples, x) // solves polynomial 
+    n.reg_leastsquares(pair_tuples, degree) // returns polynomial
+    n.reg_leastsquares_solve(pair_tuples, x, degree) // solves polynomial 
     n.reg_leastsquares_solve([(x0,y0), (x1,y1), (x2,y3), ...], x, deg)
 
 # Resources
